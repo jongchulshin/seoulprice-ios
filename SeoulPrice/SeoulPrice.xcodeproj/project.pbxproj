@@ -12,6 +12,9 @@
 		9C577AE5268A4AA70069F9D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C577AE3268A4AA70069F9D8 /* Main.storyboard */; };
 		9C577AE7268A4AA80069F9D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C577AE6268A4AA80069F9D8 /* Assets.xcassets */; };
 		9C577AEA268A4AA80069F9D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C577AE8268A4AA80069F9D8 /* LaunchScreen.storyboard */; };
+		9C76332726C19B6E0008634E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76332626C19B6E0008634E /* HomeViewController.swift */; };
+		9C76332D26C19F350008634E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76332C26C19F350008634E /* HomeViewModel.swift */; };
+		9CB49F2626D6A1FC000D4B1F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB49F2526D6A1FC000D4B1F /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		9C577AE6268A4AA80069F9D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C577AE9268A4AA80069F9D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C577AEB268A4AA80069F9D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C76332626C19B6E0008634E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9C76332C26C19F350008634E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9CB49F2526D6A1FC000D4B1F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		9C577ADC268A4AA70069F9D8 /* SeoulPrice */ = {
 			isa = PBXGroup;
 			children = (
+				9CA82FF726BF1E5000E31728 /* Scenes */,
+				9CB49F2426D6A0F0000D4B1F /* Utility */,
 				9C577ADD268A4AA70069F9D8 /* AppDelegate.swift */,
-				9C577AE1268A4AA70069F9D8 /* SplashViewController.swift */,
 				9C577AE3268A4AA70069F9D8 /* Main.storyboard */,
 				9C577AE6268A4AA80069F9D8 /* Assets.xcassets */,
 				9C577AE8268A4AA80069F9D8 /* LaunchScreen.storyboard */,
 				9C577AEB268A4AA80069F9D8 /* Info.plist */,
 			);
 			path = SeoulPrice;
+			sourceTree = "<group>";
+		};
+		9CA82FF726BF1E5000E31728 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9CA82FF926BF1ED400E31728 /* Home */,
+				9CA82FF826BF1EA600E31728 /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9CA82FF826BF1EA600E31728 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				9C577AE1268A4AA70069F9D8 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		9CA82FF926BF1ED400E31728 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9C76332C26C19F350008634E /* HomeViewModel.swift */,
+				9C76332626C19B6E0008634E /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9CB49F2426D6A0F0000D4B1F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9CB49F2526D6A1FC000D4B1F /* UIViewController+Extension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +177,9 @@
 			files = (
 				9C577AE2268A4AA70069F9D8 /* SplashViewController.swift in Sources */,
 				9C577ADE268A4AA70069F9D8 /* AppDelegate.swift in Sources */,
+				9C76332D26C19F350008634E /* HomeViewModel.swift in Sources */,
+				9CB49F2626D6A1FC000D4B1F /* UIViewController+Extension.swift in Sources */,
+				9C76332726C19B6E0008634E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
