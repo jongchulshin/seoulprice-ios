@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C31849926DAD49D005607F2 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C31849826DAD49D005607F2 /* UIColor+Hex.swift */; };
 		9C577ADE268A4AA70069F9D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C577ADD268A4AA70069F9D8 /* AppDelegate.swift */; };
 		9C577AE2268A4AA70069F9D8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C577AE1268A4AA70069F9D8 /* SplashViewController.swift */; };
 		9C577AE5268A4AA70069F9D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C577AE3268A4AA70069F9D8 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C31849826DAD49D005607F2 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		9C577ADA268A4AA70069F9D8 /* SeoulPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeoulPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C577ADD268A4AA70069F9D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C577AE1268A4AA70069F9D8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				9CB49F2526D6A1FC000D4B1F /* UIViewController+Extension.swift */,
+				9C31849826DAD49D005607F2 /* UIColor+Hex.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				9C577AE2268A4AA70069F9D8 /* SplashViewController.swift in Sources */,
 				9C577ADE268A4AA70069F9D8 /* AppDelegate.swift in Sources */,
 				9C76332D26C19F350008634E /* HomeViewModel.swift in Sources */,
+				9C31849926DAD49D005607F2 /* UIColor+Hex.swift in Sources */,
 				9CB49F2626D6A1FC000D4B1F /* UIViewController+Extension.swift in Sources */,
 				9C76332726C19B6E0008634E /* HomeViewController.swift in Sources */,
 			);

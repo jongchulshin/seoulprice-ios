@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController storyboardIdentifier="SplashViewController" id="BYZ-38-t0r" customClass="SplashViewController" customModule="SeoulPrice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.36470588235294116" green="0.80784313725490198" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -28,15 +28,37 @@
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="DaF-PR-dMF" customClass="HomeViewController" customModule="SeoulPrice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rs7-Ik-vJz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFr-O3-ckx">
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="Khl-O6-3UN"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNr-PT-Y3r">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" red="0.36470588235294116" green="0.80784313725490198" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="c2J-1m-yFp"/>
-                        <color key="backgroundColor" red="0.36470588235294116" green="0.80784313725490198" blue="0.51372549019607838" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dFr-O3-ckx" firstAttribute="trailing" secondItem="c2J-1m-yFp" secondAttribute="trailing" id="Gwq-uz-Fkp"/>
+                            <constraint firstItem="dFr-O3-ckx" firstAttribute="top" secondItem="c2J-1m-yFp" secondAttribute="top" id="HYR-WT-k6g"/>
+                            <constraint firstAttribute="bottom" secondItem="jNr-PT-Y3r" secondAttribute="bottom" id="Njn-IZ-jyO"/>
+                            <constraint firstItem="jNr-PT-Y3r" firstAttribute="leading" secondItem="c2J-1m-yFp" secondAttribute="leading" id="W5F-DY-H6e"/>
+                            <constraint firstItem="jNr-PT-Y3r" firstAttribute="top" secondItem="dFr-O3-ckx" secondAttribute="bottom" id="WXr-sC-Ev3"/>
+                            <constraint firstItem="jNr-PT-Y3r" firstAttribute="trailing" secondItem="c2J-1m-yFp" secondAttribute="trailing" id="mqO-Od-R97"/>
+                            <constraint firstItem="dFr-O3-ckx" firstAttribute="leading" secondItem="c2J-1m-yFp" secondAttribute="leading" id="yN3-AN-tWR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqQ-sj-AXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="538" y="98"/>
+            <point key="canvasLocation" x="536.79999999999995" y="97.536945812807886"/>
         </scene>
     </scenes>
 </document>
