@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,9 +43,28 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0v-Mw-xYH" userLabel="LoadingStatusView">
                                         <rect key="frame" x="8" y="8" width="359" height="44"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Wbp-cI-EUb" userLabel="Indicator">
+                                                <rect key="frame" x="8" y="12" width="20" height="20"/>
+                                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b3D-TE-4SM">
+                                                <rect key="frame" x="36" y="0.0" width="315" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="b3D-TE-4SM" firstAttribute="leading" secondItem="Wbp-cI-EUb" secondAttribute="trailing" constant="8" id="1OU-Xm-fI7"/>
+                                            <constraint firstItem="Wbp-cI-EUb" firstAttribute="leading" secondItem="u0v-Mw-xYH" secondAttribute="leading" constant="8" id="8aw-ho-L7S"/>
+                                            <constraint firstItem="b3D-TE-4SM" firstAttribute="centerY" secondItem="u0v-Mw-xYH" secondAttribute="centerY" id="LBU-or-b1q"/>
+                                            <constraint firstItem="b3D-TE-4SM" firstAttribute="top" secondItem="u0v-Mw-xYH" secondAttribute="top" id="UN8-7f-ONe"/>
                                             <constraint firstAttribute="height" constant="44" id="aeW-lv-3ef"/>
+                                            <constraint firstAttribute="bottom" secondItem="b3D-TE-4SM" secondAttribute="bottom" id="eLE-bF-kIw"/>
+                                            <constraint firstItem="Wbp-cI-EUb" firstAttribute="centerY" secondItem="u0v-Mw-xYH" secondAttribute="centerY" id="kot-BR-Rg9"/>
+                                            <constraint firstAttribute="trailing" secondItem="b3D-TE-4SM" secondAttribute="trailing" constant="8" id="mjn-gj-X7D"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -76,9 +94,4 @@
             <point key="canvasLocation" x="535.20000000000005" y="96.798029556650249"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
