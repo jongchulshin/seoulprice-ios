@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0v-Mw-xYH" userLabel="LoadingStatusView">
-                                        <rect key="frame" x="8" y="8" width="359" height="44"/>
+                                        <rect key="frame" x="8" y="0.0" width="359" height="44"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Wbp-cI-EUb" userLabel="Indicator">
                                                 <rect key="frame" x="8" y="12" width="20" height="20"/>
@@ -67,12 +67,18 @@
                                             <constraint firstAttribute="trailing" secondItem="b3D-TE-4SM" secondAttribute="trailing" constant="8" id="mjn-gj-X7D"/>
                                         </constraints>
                                     </view>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnx-lt-uxW">
+                                        <rect key="frame" x="8" y="45" width="359" height="679"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="lAE-RW-Wx1"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="RPh-Ci-0so"/>
+                                    </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.36470588235294116" green="0.80784313725490198" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailingMargin" secondItem="u0v-Mw-xYH" secondAttribute="trailing" id="Mmd-PB-cdA"/>
-                                    <constraint firstItem="u0v-Mw-xYH" firstAttribute="top" secondItem="jNr-PT-Y3r" secondAttribute="topMargin" id="Ouu-KZ-mi8"/>
-                                    <constraint firstItem="u0v-Mw-xYH" firstAttribute="leading" secondItem="jNr-PT-Y3r" secondAttribute="leadingMargin" id="QxP-Wi-alE"/>
+                                    <constraint firstItem="u0v-Mw-xYH" firstAttribute="leading" secondItem="jNr-PT-Y3r" secondAttribute="leadingMargin" id="8mb-Bn-gJB"/>
+                                    <constraint firstItem="u0v-Mw-xYH" firstAttribute="top" secondItem="jNr-PT-Y3r" secondAttribute="top" id="afD-NU-RRd"/>
+                                    <constraint firstItem="u0v-Mw-xYH" firstAttribute="trailing" secondItem="jNr-PT-Y3r" secondAttribute="trailingMargin" id="dk1-dt-kUS"/>
                                 </constraints>
                             </view>
                         </subviews>
