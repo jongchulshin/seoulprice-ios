@@ -111,6 +111,11 @@
                             <constraint firstItem="dFr-O3-ckx" firstAttribute="leading" secondItem="c2J-1m-yFp" secondAttribute="leading" id="zV5-ha-JVu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="indicatorView" destination="Wbp-cI-EUb" id="vL2-xU-T00"/>
+                        <outlet property="loadingStatusLabel" destination="b3D-TE-4SM" id="FrV-P8-FBy"/>
+                        <outlet property="scrollView" destination="ZQg-CD-SuD" id="N9Z-9m-OmX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqQ-sj-AXx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
