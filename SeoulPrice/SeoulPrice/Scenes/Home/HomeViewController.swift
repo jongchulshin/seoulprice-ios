@@ -40,18 +40,20 @@ class HomeViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        let margin: CGFloat = 16.0
-        let buttonViewHeight: CGFloat = 140.0
-        let largeButtonViewWidth = self.scrollView.frame.width - margin * 2
-        let smallButtonViewWidth = (self.scrollView.frame.width - margin * 3) / 2
-        
-        self.mainButtonView1.frame = CGRect(x: margin, y: margin, width: largeButtonViewWidth, height: buttonViewHeight)
-        self.mainButtonView2.frame = CGRect(x: margin, y: self.mainButtonView1.frame.maxY + margin, width: largeButtonViewWidth, height: buttonViewHeight)
-        
-        self.mainButtonView3.frame = CGRect(x: margin, y: self.mainButtonView2.frame.maxY + margin, width: smallButtonViewWidth, height: buttonViewHeight)
-        self.mainButtonView4.frame = CGRect(x: self.scrollView.frame.maxX - margin - smallButtonViewWidth, y: self.mainButtonView2.frame.maxY + margin, width: smallButtonViewWidth, height: buttonViewHeight)
-        
-        let contentHeight = self.mainButtonView4.frame.maxY + margin
-        self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: contentHeight)
+        DispatchQueue.main.async {
+            let margin: CGFloat = 8.0
+            let buttonViewHeight: CGFloat = 140.0
+            let largeButtonViewWidth = self.scrollView.frame.width - margin * 2
+            let smallButtonViewWidth = (self.scrollView.frame.width - margin * 4) / 2
+            
+            self.mainButtonView1.frame = CGRect(x: margin, y: margin, width: largeButtonViewWidth, height: buttonViewHeight)
+            self.mainButtonView2.frame = CGRect(x: margin, y: self.mainButtonView1.frame.maxY + margin * 2, width: largeButtonViewWidth, height: buttonViewHeight)
+            
+            self.mainButtonView3.frame = CGRect(x: margin, y: self.mainButtonView2.frame.maxY + margin * 2, width: smallButtonViewWidth, height: buttonViewHeight)
+            self.mainButtonView4.frame = CGRect(x: self.mainButtonView3.frame.maxX + margin * 2, y: self.mainButtonView2.frame.maxY + margin * 2, width: smallButtonViewWidth, height: buttonViewHeight)
+            
+            let contentHeight = self.mainButtonView4.frame.maxY + margin * 2
+            self.scrollView.contentSize = CGSize(width: self.scrollView.frame.width, height: contentHeight)
+        }
     }
 }

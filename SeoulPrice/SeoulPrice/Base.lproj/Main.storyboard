@@ -68,10 +68,10 @@
                                         </constraints>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQg-CD-SuD">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="680"/>
+                                        <rect key="frame" x="8" y="44" width="359" height="680"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwM-p3-H5Y">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="680"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="680"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
@@ -89,13 +89,13 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.36470588235294116" green="0.80784313725490198" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ZQg-CD-SuD" firstAttribute="leading" secondItem="jNr-PT-Y3r" secondAttribute="leadingMargin" id="7we-y6-V9f"/>
                                     <constraint firstItem="u0v-Mw-xYH" firstAttribute="leading" secondItem="jNr-PT-Y3r" secondAttribute="leadingMargin" id="8mb-Bn-gJB"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZQg-CD-SuD" secondAttribute="trailing" id="9Jd-IT-ASY"/>
-                                    <constraint firstItem="ZQg-CD-SuD" firstAttribute="leading" secondItem="jNr-PT-Y3r" secondAttribute="leading" id="MOu-Bm-SLS"/>
                                     <constraint firstAttribute="bottom" secondItem="ZQg-CD-SuD" secondAttribute="bottom" id="abu-1i-iMT"/>
                                     <constraint firstItem="u0v-Mw-xYH" firstAttribute="top" secondItem="jNr-PT-Y3r" secondAttribute="top" id="afD-NU-RRd"/>
                                     <constraint firstItem="u0v-Mw-xYH" firstAttribute="trailing" secondItem="jNr-PT-Y3r" secondAttribute="trailingMargin" id="dk1-dt-kUS"/>
                                     <constraint firstItem="ZQg-CD-SuD" firstAttribute="top" secondItem="u0v-Mw-xYH" secondAttribute="bottom" id="isx-Qz-91p"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="ZQg-CD-SuD" secondAttribute="trailing" id="uHe-Hd-PnQ"/>
                                 </constraints>
                             </view>
                         </subviews>
