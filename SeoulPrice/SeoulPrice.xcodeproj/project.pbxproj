@@ -16,6 +16,8 @@
 		9C59810226E92E7D00BA0ECD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9C59810126E92E7D00BA0ECD /* Alamofire */; };
 		9C59810626E92EE100BA0ECD /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9C59810526E92EE100BA0ECD /* RxSwift */; };
 		9C59810826E92EE100BA0ECD /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 9C59810726E92EE100BA0ECD /* RxCocoa */; };
+		9C6F2AE926EFBE2800629A1D /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6F2AE826EFBE2800629A1D /* Realm */; };
+		9C6F2AEB26EFBE2800629A1D /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9C6F2AEA26EFBE2800629A1D /* RealmSwift */; };
 		9C76332726C19B6E0008634E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76332626C19B6E0008634E /* HomeViewController.swift */; };
 		9C76332D26C19F350008634E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76332C26C19F350008634E /* HomeViewModel.swift */; };
 		9C9ED32226E53B5A0077D603 /* HomeMainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9ED32126E53B5A0077D603 /* HomeMainButtonView.swift */; };
@@ -44,6 +46,8 @@
 			files = (
 				9C59810826E92EE100BA0ECD /* RxCocoa in Frameworks */,
 				9C59810626E92EE100BA0ECD /* RxSwift in Frameworks */,
+				9C6F2AE926EFBE2800629A1D /* Realm in Frameworks */,
+				9C6F2AEB26EFBE2800629A1D /* RealmSwift in Frameworks */,
 				9C59810226E92E7D00BA0ECD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +141,8 @@
 				9C59810126E92E7D00BA0ECD /* Alamofire */,
 				9C59810526E92EE100BA0ECD /* RxSwift */,
 				9C59810726E92EE100BA0ECD /* RxCocoa */,
+				9C6F2AE826EFBE2800629A1D /* Realm */,
+				9C6F2AEA26EFBE2800629A1D /* RealmSwift */,
 			);
 			productName = SeoulPrice;
 			productReference = 9C577ADA268A4AA70069F9D8 /* SeoulPrice.app */;
@@ -168,6 +174,7 @@
 			packageReferences = (
 				9C59810026E92E7D00BA0ECD /* XCRemoteSwiftPackageReference "Alamofire" */,
 				9C59810426E92EE100BA0ECD /* XCRemoteSwiftPackageReference "RxSwift" */,
+				9C6F2AE726EFBE2800629A1D /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 9C577ADB268A4AA70069F9D8 /* Products */;
 			projectDirPath = "";
@@ -426,6 +433,14 @@
 				version = 6.2.0;
 			};
 		};
+		9C6F2AE726EFBE2800629A1D /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = exactVersion;
+				version = 10.15.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -443,6 +458,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9C59810426E92EE100BA0ECD /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		9C6F2AE826EFBE2800629A1D /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C6F2AE726EFBE2800629A1D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		9C6F2AEA26EFBE2800629A1D /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C6F2AE726EFBE2800629A1D /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
