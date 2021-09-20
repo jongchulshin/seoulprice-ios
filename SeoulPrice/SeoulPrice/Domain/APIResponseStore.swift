@@ -1,5 +1,5 @@
 //
-//  PriceInfoStore.swift
+//  APIResponseStore.swift
 //  SeoulPrice
 //
 //  Created by jongchulshin on 2021/09/14.
@@ -7,6 +7,6 @@
 
 import UIKit
 
-class PriceInfoStore: NSObject {
+class APIResponseStore: NSObject {
 
 }
