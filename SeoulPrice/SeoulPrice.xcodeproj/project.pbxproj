@@ -116,8 +116,8 @@
 		9C6F2AEF26EFCEF300629A1D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				9C6F2AF726EFD27200629A1D /* DBStore.swift */,
 				9C6F2AFA26EFD60400629A1D /* APIResponseStore.swift */,
+				9C6F2AF726EFD27200629A1D /* DBStore.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
