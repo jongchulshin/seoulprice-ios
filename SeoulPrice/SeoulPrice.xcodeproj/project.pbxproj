@@ -24,6 +24,8 @@
 		9C6F2AFB26EFD60400629A1D /* APIResponseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6F2AFA26EFD60400629A1D /* APIResponseStore.swift */; };
 		9C76332726C19B6E0008634E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76332626C19B6E0008634E /* HomeViewController.swift */; };
 		9C76332D26C19F350008634E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C76332C26C19F350008634E /* HomeViewModel.swift */; };
+		9C89E1EF270629DE0098694A /* SeoulPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89E1EE270629DE0098694A /* SeoulPriceModel.swift */; };
+		9C89E1F32706307F0098694A /* APIResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C89E1F22706307F0098694A /* APIResultModel.swift */; };
 		9C9ED32226E53B5A0077D603 /* HomeMainButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9ED32126E53B5A0077D603 /* HomeMainButtonView.swift */; };
 		9CB49F2626D6A1FC000D4B1F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB49F2526D6A1FC000D4B1F /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +45,8 @@
 		9C6F2AFA26EFD60400629A1D /* APIResponseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseStore.swift; sourceTree = "<group>"; };
 		9C76332626C19B6E0008634E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C76332C26C19F350008634E /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9C89E1EE270629DE0098694A /* SeoulPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeoulPriceModel.swift; sourceTree = "<group>"; };
+		9C89E1F22706307F0098694A /* APIResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResultModel.swift; sourceTree = "<group>"; };
 		9C9ED32126E53B5A0077D603 /* HomeMainButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainButtonView.swift; sourceTree = "<group>"; };
 		9CB49F2526D6A1FC000D4B1F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +86,7 @@
 		9C577ADC268A4AA70069F9D8 /* SeoulPrice */ = {
 			isa = PBXGroup;
 			children = (
+				9C89E1ED2706299A0098694A /* Model */,
 				9C6F2AEE26EFCB7700629A1D /* Repository */,
 				9C6F2AEF26EFCEF300629A1D /* Domain */,
 				9CA82FF726BF1E5000E31728 /* Scenes */,
@@ -120,6 +125,15 @@
 				9C6F2AF726EFD27200629A1D /* DBStore.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		9C89E1ED2706299A0098694A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C89E1F22706307F0098694A /* APIResultModel.swift */,
+				9C89E1EE270629DE0098694A /* SeoulPriceModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9CA82FF726BF1E5000E31728 /* Scenes */ = {
@@ -243,11 +257,13 @@
 				9C577ADE268A4AA70069F9D8 /* AppDelegate.swift in Sources */,
 				9C76332D26C19F350008634E /* HomeViewModel.swift in Sources */,
 				9C31849926DAD49D005607F2 /* UIColor+Hex.swift in Sources */,
+				9C89E1EF270629DE0098694A /* SeoulPriceModel.swift in Sources */,
 				9CB49F2626D6A1FC000D4B1F /* UIViewController+Extension.swift in Sources */,
 				9C6F2AF826EFD27200629A1D /* DBStore.swift in Sources */,
 				9C9ED32226E53B5A0077D603 /* HomeMainButtonView.swift in Sources */,
 				9C6F2AFB26EFD60400629A1D /* APIResponseStore.swift in Sources */,
 				9C6F2AF126EFCF2A00629A1D /* APIService.swift in Sources */,
+				9C89E1F32706307F0098694A /* APIResultModel.swift in Sources */,
 				9C76332726C19B6E0008634E /* HomeViewController.swift in Sources */,
 				9C6F2AF526EFCF5B00629A1D /* DBService.swift in Sources */,
 			);

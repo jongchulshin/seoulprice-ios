@@ -5,8 +5,8 @@
 //  Created by jongchulshin on 2021/09/14.
 //
 
-import UIKit
+import RxSwift
 
-class DBService: NSObject {
+class DBService {
 
 }

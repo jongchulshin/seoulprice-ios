@@ -5,9 +5,9 @@
 //  Created by jongchulshin on 2021/08/10.
 //
 
-import UIKit
+import RxSwift
 
-class HomeViewModel: NSObject {
+class HomeViewModel {
 
     //private let useCase: HomeUseCase
     
