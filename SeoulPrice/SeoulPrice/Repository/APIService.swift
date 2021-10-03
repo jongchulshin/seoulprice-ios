@@ -19,6 +19,12 @@ class APIService {
         var totalCount: Int
         var result: APIResultModel
         var prices: [SeoulPriceModel]
+        
+        enum CodingKeys: String, CodingKey {
+            case totalCount = "list_total_count"
+            case result = "RESULT"
+            case prices = "row"
+        }
     }
 
     func requestSeoulPriceData(_ url: String) -> Observable<Response> {
@@ -38,6 +44,7 @@ class APIService {
                         do {
                             let jsonData = try JSONDecoder().decode(Response.self, from: data)
                             observer.onNext(jsonData)
+                            observer.onCompleted()
                         } catch {
                             observer.onError(error)
                         }

@@ -8,4 +8,9 @@
 struct APIResultModel: Decodable {
     var code: String
     var message: String
+    
+    enum CodingKeys: String, CodingKey {
+        case code = "CODE"
+        case message = "MESSAGE"
+    }
 }
