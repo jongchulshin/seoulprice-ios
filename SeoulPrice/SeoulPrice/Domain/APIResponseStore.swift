@@ -7,6 +7,19 @@
 
 import RxSwift
 
-class APIResponseStore {
+struct FetchStatus {
+    var percent: UInt
+    var isCompleted: Bool
+}
 
+class APIResponseStore {
+    
+    func fetchSeoulPrice() -> Observable<FetchStatus> {
+        return Observable.create { observer in
+            
+            
+            return Disposables.create()
+        }
+    }
+    
 }

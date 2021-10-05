@@ -27,7 +27,11 @@ class APIService {
         }
     }
 
-    func requestSeoulPriceData(_ url: String) -> Observable<Response> {
+    func requestSeoulPriceData(_ from: UInt, _ to: UInt) -> Observable<Response> {
+        let begin = String(from)
+        let end = String(to)
+        let url = "http://openAPI.seoul.go.kr:8088/\(seoulPriceAPIKey)/json/ListNecessariesPricesService/\(begin)/\(end)"
+        
         return Observable.create { observer in
             AF.request(url)
                 .validate(contentType: ["application/json"])
