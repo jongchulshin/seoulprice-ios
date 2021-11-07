@@ -8,7 +8,18 @@
 import RxSwift
 
 class HomeViewModel {
+    
+    //API Domain
+    var apiDomain: APIResponseStore!
 
-    //private let useCase: HomeUseCase
+    init() {
+        self.apiDomain = APIResponseStore()
+        _ = apiDomain.fetchSeoulPrice()
+            .subscribe(onNext: { percent in
+                print("-----fetchAllSeoulPrice onNext-----")
+            }, onCompleted:{
+                print("-----fetchAllSeoulPrice completed-----")
+            })
+    }
     
 }

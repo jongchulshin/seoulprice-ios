@@ -5,6 +5,16 @@
 //  Created by jongchulshin on 2021/10/01.
 //
 
+struct APIResultModel: Decodable {
+    var code: String
+    var message: String
+    
+    enum CodingKeys: String, CodingKey {
+        case code = "CODE"
+        case message = "MESSAGE"
+    }
+}
+
 struct SeoulPriceModel: Decodable {
     var dataId: Int
     var martId: Int
@@ -36,5 +46,25 @@ struct SeoulPriceModel: Decodable {
         case martTypeName = "M_TYPE_NAME"
         case guCode = "M_GU_CODE"
         case guName = "M_GU_NAME"
+    }
+}
+
+struct APIResponseModel: Decodable {
+    var totalCount: Int
+    var result: APIResultModel
+    var prices: [SeoulPriceModel]
+    
+    enum CodingKeys: String, CodingKey {
+        case totalCount = "list_total_count"
+        case result = "RESULT"
+        case prices = "row"
+    }
+}
+
+struct ListNecessariesPricesService: Decodable {
+    var apiResponse: APIResponseModel
+    
+    enum CodingKeys: String, CodingKey {
+        case apiResponse = "ListNecessariesPricesService"
     }
 }

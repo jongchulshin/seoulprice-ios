@@ -14,22 +14,8 @@ enum ErrorCode: Int, Error {
 }
 
 class APIService {
-    
-    struct Response: Decodable {
-        var totalCount: Int
-        var result: APIResultModel
-        var prices: [SeoulPriceModel]
-        
-        enum CodingKeys: String, CodingKey {
-            case totalCount = "list_total_count"
-            case result = "RESULT"
-            case prices = "row"
-        }
-    }
 
-    func requestSeoulPriceData(_ from: UInt, _ to: UInt) -> Observable<Response> {
-        let begin = String(from)
-        let end = String(to)
+    static func requestSeoulPriceData(from begin: Int, to end: Int) -> Observable<ListNecessariesPricesService> {
         let url = "http://openAPI.seoul.go.kr:8088/\(seoulPriceAPIKey)/json/ListNecessariesPricesService/\(begin)/\(end)"
         
         return Observable.create { observer in
@@ -46,7 +32,7 @@ class APIService {
                         }
                         
                         do {
-                            let jsonData = try JSONDecoder().decode(Response.self, from: data)
+                            let jsonData = try JSONDecoder().decode(ListNecessariesPricesService.self, from: data)
                             observer.onNext(jsonData)
                             observer.onCompleted()
                         } catch {

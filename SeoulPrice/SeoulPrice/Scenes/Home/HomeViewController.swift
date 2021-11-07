@@ -27,6 +27,8 @@ class HomeViewController: UIViewController {
     var viewModel: HomeViewModel!
     
     override func viewDidLoad() {
+        self.viewModel = HomeViewModel()
+        
         self.mainButtonView1 = HomeMainButtonView()
         self.scrollView.addSubview(self.mainButtonView1)
         
