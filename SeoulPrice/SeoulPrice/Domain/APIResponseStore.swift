@@ -70,8 +70,11 @@ class APIResponseStore: APIResponseStoreProtocol {
     func fetchSeoulPrice() -> Observable<FetchStatus> {
         print("fetchSeoulPrice")
         self.begin = 1
+        self.responseList.removeAll()
         let userDefaults = UserDefaults.standard
         let latestData = userDefaults.object(forKey: "KEY_LATEST_SEOUL_PRICE_DATA") as? [String:String] ?? [:]
+        
+        print("DB 데이터 수: " + DBManager.shared.getAllSeoulPrice().count.description)
         
         return Observable.create { observer in
             self.fetchAllSeoulPrice(latestData["DataID"], latestData["RegistrationDate"], observer)
@@ -91,6 +94,7 @@ class APIResponseStore: APIResponseStoreProtocol {
                 self.begin += 1000
                 
                 let prices: [SeoulPriceModel] = response.apiResponse.prices
+                self.responseList.append(contentsOf: prices)
                 var stop: Bool = true
                 
                 if let latestDataId = Int(dataId ?? "0"), latestDataId > 0,
@@ -132,6 +136,8 @@ class APIResponseStore: APIResponseStoreProtocol {
                 }
                 
                 if stop {
+                    print("DB 추가 데이터 수: " + self.responseList.count.description)
+                    DBManager.shared.addOrUpdate(self.responseList)
                     observer.onCompleted()
                 } else {
                     self.fetchAllSeoulPrice(dataId, registrationDate, observer)

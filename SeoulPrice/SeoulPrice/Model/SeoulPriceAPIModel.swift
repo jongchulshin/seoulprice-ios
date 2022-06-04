@@ -5,7 +5,9 @@
 //  Created by jongchulshin on 2021/10/01.
 //
 
-struct APIResultModel: Decodable {
+import RealmSwift
+
+struct ResultModel: Decodable {
     var code: String
     var message: String
     
@@ -15,21 +17,21 @@ struct APIResultModel: Decodable {
     }
 }
 
-struct SeoulPriceModel: Decodable {
-    var dataId: Int
-    var martId: Int
-    var martName: String
-    var itemId: Int
-    var itemName: String
-    var itemUnit: String
-    var itemPrice: String
-    var notes: String
-    var researchDate: String
-    var registrationDate: String
-    var martTypeCode: String
-    var martTypeName: String
-    var guCode: String
-    var guName: String
+class SeoulPriceModel: Object, Decodable {
+    @Persisted var dataId: Int = 0
+    @Persisted var martId: Int = 0
+    @Persisted var martName: String = ""
+    @Persisted var itemId: Int = 0
+    @Persisted var itemName: String = ""
+    @Persisted var itemUnit: String = ""
+    @Persisted var itemPrice: String = ""
+    @Persisted var notes: String = ""
+    @Persisted var researchDate: String = ""
+    @Persisted var registrationDate: String = ""
+    @Persisted var martTypeCode: String = ""
+    @Persisted var martTypeName: String = ""
+    @Persisted var guCode: String = ""
+    @Persisted var guName: String = ""
     
     enum CodingKeys: String, CodingKey {
         case dataId = "P_SEQ"
@@ -47,11 +49,15 @@ struct SeoulPriceModel: Decodable {
         case guCode = "M_GU_CODE"
         case guName = "M_GU_NAME"
     }
+    
+    override class func primaryKey() -> String? {
+      return "dataId"
+    }
 }
 
 struct APIResponseModel: Decodable {
     var totalCount: Int
-    var result: APIResultModel
+    var result: ResultModel
     var prices: [SeoulPriceModel]
     
     enum CodingKeys: String, CodingKey {
