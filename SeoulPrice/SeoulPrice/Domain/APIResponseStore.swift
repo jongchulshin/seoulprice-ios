@@ -134,6 +134,8 @@ class APIResponseStore: APIResponseStoreProtocol {
                         }
                     }
                 }
+                let status = FetchStatus(percent: 100)
+                observer.onNext(status)
                 
                 if stop {
                     print("DB 추가 데이터 수: " + self.responseList.count.description)
@@ -160,7 +162,8 @@ class APIResponseStore: APIResponseStoreProtocol {
         
         let now = self.dateFormatter.date(from: self.now)!
         let components = Calendar.current.dateComponents([.day], from: now)
-        let targetPeriod = 62 + components.day! //('2개월 + 현재 날짜'를 유효 기간으로 설정)
+        //let targetPeriod = 62 + components.day! //('2개월 + 현재 날짜'를 유효 기간으로 설정)
+        let targetPeriod = 3 + components.day! //(테스트용)
         let timeInterval = now.timeIntervalSinceReferenceDate - date.timeIntervalSinceReferenceDate
         
         let devideByTargetPeriod: Int = Int(timeInterval / Double((86400 * targetPeriod))) //(1일 = 86400초)

@@ -7,8 +7,10 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController {
+    let disposeBag = DisposeBag()
 
     //Loading status view
     @IBOutlet var indicatorView: UIActivityIndicatorView!
@@ -40,6 +42,11 @@ class HomeViewController: UIViewController {
         
         self.mainButtonView4 = HomeMainButtonView()
         self.scrollView.addSubview(self.mainButtonView4)
+        
+        viewModel.activated
+            .map { !$0 }
+            .bind(to: indicatorView.rx.isHidden)
+            .disposed(by: disposeBag)
     }
     
     override func viewDidLayoutSubviews() {

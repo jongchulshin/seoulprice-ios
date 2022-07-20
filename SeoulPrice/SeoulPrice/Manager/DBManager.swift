@@ -5,16 +5,23 @@
 //  Created by jongchulshin on 2022/03/30.
 //
 
+import Foundation
 import RealmSwift
+import CommonCrypto
 
 class DBManager {
     private let realm: Realm
     static let shared = DBManager()
     
     private init() {
-        let config = Realm.Configuration.defaultConfiguration
-        //let encryptionKey: Data =
-        //config.encryptionKey = encryptionKey
+        var config = Realm.Configuration.defaultConfiguration
+        
+        var digest = [UInt8](repeating: 0, count: Int(CC_SHA512_DIGEST_LENGTH))
+        let data = seoulPriceAPIKey.data(using: String.Encoding.utf8 , allowLossyConversion: true)
+        let value =  data! as NSData
+        CC_SHA512(value.bytes, CC_LONG(value.length), &digest)
+        config.encryptionKey = Data(digest)
+        
         do {
             realm = try Realm(configuration: config)
         } catch {
